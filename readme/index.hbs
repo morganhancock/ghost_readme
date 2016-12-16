@@ -1,0 +1,14 @@
+{{!< default}}
+{{#foreach posts}}
+  <div class="markdown-body">
+  <h1 class="markdown-title">{{title}}</h1>
+  {{content}}
+  <p class="markdown-date-tags"> {{date format='dddd DD MMM YYYY'}}
+  {{#if tags}}|
+      Tags: {{tags separator=" | "}}
+    {{/if}}</p>
+  </div>
+{{/foreach}}
+{{#if pagination}}
+  {{{pagination}}}
+{{/if}}
